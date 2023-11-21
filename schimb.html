@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="card">
+        <figure class="card banner">
+          <img src="./images/car-1.jpg" alt="Toyota RAV4 2021" loading="lazy" width="440" height="300" class="w-100">
+        </figure>
+      
+        <figure class="card banner">
+          <img src="/Renthal/images/car1-1.jpg" alt="Toyota RAV4 2021" loading="lazy" width="440" height="300" class="w-100">
+        </figure>
+      
+        <figure class="card banner">
+          <img src="/Renthal/images/car1-2.jpg" alt="Toyota RAV4 2021" loading="lazy" width="440" height="300" class="w-100">
+        </figure>
+      </div>
+      
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      
+      <script>
+        let slideIndex = 0;
+        showSlides();
+      
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("w-100");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+          setTimeout(showSlides, 1000); // Schimbă imaginea la fiecare 1 secundă
+        }
+      </script>
+
+</body>
+</html>

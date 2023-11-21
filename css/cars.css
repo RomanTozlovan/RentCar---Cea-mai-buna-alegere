@@ -1,0 +1,269 @@
+
+
+/* Stilizarea containerului pentru imagine */
+.image-container {
+    text-align: right;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 600px; /* Lățimea maximă a containerului */
+   margin-right: 50px;
+    position: relative;
+  }
+
+  /* Stilizarea imaginii */
+  .mySlides {
+    width: 100%; /* Lățimea imaginii este setată la 100% */
+    border-radius: 15px; /* Colțuri rotunde */
+  }
+
+  /* Stilizarea butoanelor */
+  .w3-button {
+    background-color: transparent; /* Fundal transparent */
+    color: white; /* Culoare text buton */
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Stilizare buton stânga */
+  .w3-display-left {
+    left: 0;
+  }
+
+  /* Stilizare buton dreapta */
+  .w3-display-right {
+    right: 0;
+  }
+
+.title{
+    margin-top: 90px;
+margin-left: 220px;
+font-size: 60px;
+}
+
+   /* Stilizare pentru tabel */
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: separate; /* Schimbăm la "separate" pentru a crea un aspect mai distinct al celulelor */
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Efect de umbrire mai pronunțat */
+    background: #f5f5f5; /* Culori mai deschise pentru fundal */
+    border-radius: 10px; /* Margini rotunjite */
+    border-spacing: 0; /* Înlăturăm spațiile între celule */
+    overflow: hidden; /* Ascundem orice conținut care depășește containerul tabelului */
+    margin-top: -370px;
+    margin-left: 60px;
+}
+
+th, td {
+    border: 2px solid #0074D9; /* Bordură mai groasă pentru celule */
+    text-align: left;
+    padding: 12px 20px; /* Padding mai mare pentru mai mult spațiu în celule */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #0074D9;
+    color: white;
+    text-transform: uppercase; /* Text în majuscule pentru antetele tabelului */
+    letter-spacing: 1px; /* Spațiere între litere */
+}
+
+/* Stilizare pentru interactivitate */
+th:hover {
+    background-color: #0056a6;
+    cursor: pointer;
+    transform: scale(1.05); /* Creștem mărimea la hover pentru un efect de adâncime */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#okButton{
+    text-align: right;
+    border-radius: 10px;
+}
+
+
+/* Stilizare pentru butonul "OK" */
+#okButton {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 10%; /* Spațiu mai mare deasupra */
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(32, 32, 32, 0.7);
+    width: 100%;
+    height: 80%; /* Înălțime mai mică pentru popup */
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f9ff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 400px;
+    max-width: 100%;
+    max-height: 80%; /* Înălțime mai mică pentru conținutul popup */
+    overflow-y: auto; /* Adăugăm o bară de derulare verticală dacă conținutul depășește înălțimea */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#okButton{
+text-align: right;
+border-radius: 10px;
+margin-left: 290px;
+}
+
+/* Stilizarea butonului de back */
+
+.back-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 60px; /* Ajustăm dimensiunile butonului */
+    border: none;
+    cursor: pointer;
+    font-size: 20px; /* Ajustăm mărimea textului */
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Textul să nu se încheie la un singur rând */
+    display: inline-flex; /* Așează elementele pe același rând */
+    align-items: center; /* Aliniază vertical butonul și iconul */
+    justify-content: center;
+    margin-left: 110px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+/* Stilizarea butonului de închiriere */
+.rent-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 60px; /* Ajustăm dimensiunile butonului */
+    border: none;
+    cursor: pointer;
+    font-size: 20px; /* Ajustăm mărimea textului */
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Textul să nu se încheie la un singur rând */
+    display: inline-flex; /* Așează elementele pe același rând */
+    align-items: center; /* Aliniază vertical butonul și iconul */
+    justify-content: center;
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  
+  /* Stilizarea iconului */
+  .icon {
+    margin-right: 10px; /* Separare între icon și text */
+    font-size: 24px; /* Ajustăm mărimea iconului */
+  }
+  
+  /* Stilizarea textului butonului */
+  .button-text {
+    white-space: nowrap; /* Textul să nu se încheie la un singur rând */
+  }
+  
+  /* Stilizarea butonului rent now la hover */
+  .rent-button:hover {
+    background-color: #31fa09;
+  }
+
+    /* Stilizarea butonului back la hover */
+    .back-button:hover {
+        background-color: #fa0909;
+      }
+
+      @media screen and (max-width:960px) {
+        .col{
+          flex: 100%;
+          max-width: 80%;
+        }
+        }
+        
+        @media screen and (max-width:600px) {
+        .col{
+          flex: 100%;
+          max-width: 100%;
+        }
+        }
+
+        @media screen and (max-width:1422px) {
+          .mySlides{
+            width: 550px;
+          }
+
+          #caracteristici{
+            width: 550px;
+          }
+          }
+
+          @media screen and (max-width:1265px) {
+            .mySlides{
+              display: inline;
+              width: 750px;
+            }
+
+  
+            #caracteristici{
+              display: inline;
+              width: 750px;
+            }
+            }

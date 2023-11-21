@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENTHAL - Your favourite car</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/cars.css">
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="./images/logonou.png" width="" alt="Rent Car">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="About.html" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          <li>
+            <a href="Review.html" class="navbar-link" data-nav-link>Review</a>
+          </li>
+
+          <li>
+            <a href="index.html#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+         
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">022-38-34-36 </a>
+
+          <span class="contact-time">Monday-Friday: 9:00 am - 6:00 pm</span>
+        </div>
+
+        <a href="cars.html" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+
+          <span id="aria-label-txt">Explore cars</span>
+        </a>
+
+        <button id="togglePopup"  aria-label="Profile">
+          <ion-icon name="person-outline"></ion-icon> 
+      </button>
+      <div class="popup" id="popup">
+          <div class="popup-content">
+            <button id="closePopup">
+              <ion-icon name="close-outline"></ion-icon> 
+          </button>
+              <div id="popupContent">
+              </div>
+          </div>
+      </div>
+      <script>
+          const togglePopupButton = document.getElementById('togglePopup');
+          const closePopupButton = document.getElementById('closePopup');
+          const popup = document.getElementById('popup');
+          const popupContent = document.getElementById('popupContent');
+      
+          togglePopupButton.addEventListener('click', () => {
+              // Deschide sau închide popup-ul, în funcție de starea actuală
+              if (popup.style.display === 'block') {
+                  // Închide popup-ul
+                  popup.style.display = 'none';
+                  popupContent.innerHTML = ''; // Șterge conținutul iframe-ului
+              } else {
+                  // Deschide popup-ul
+                  popup.style.display = 'block';
+                  
+                  // Încarcă o pagină HTML într-un iframe
+                  const iframe = document.createElement('iframe');
+                  iframe.src = '/pass.html'; // Înlocuiește 'pagina.html' cu URL-ul paginii pe care dorești să o încarci.
+                  iframe.style.width = '100%';
+                  iframe.style.height = '500px'; // Ajustează dimensiunile iframe-ului după preferințele tale.
+                  popupContent.appendChild(iframe);
+              }
+          });
+      
+          closePopupButton.addEventListener('click', () => {
+              // Închide popup-ul
+              popup.style.display = 'none';
+              popupContent.innerHTML = ''; // Șterge conținutul iframe-ului
+          });
+      </script>
+
+
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+      <!-- 
+        - #BMW
+      -->
+
+        <h2 class="title">BMW 3 Series BLACK</h2>
+
+      <div class="image-container">
+        <div class="w3-content">
+          <img class="mySlides" src="/images/car-2.jpg">
+          <img class="mySlides" src="/Renthal/images/car2-1.jpg">
+          <img class="mySlides" src="/Renthal/images/car2-.jpg">
+          <img class="mySlides" src="/Renthal/images/car2-4.jpg">
+        
+      
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+      </div>
+      
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
+
+
+        <!-- 
+    - #Table
+  -->
+
+
+<table id="caracteristici">
+  <tr>
+    <th onclick="sortTable(0)">Caracteristică</th>
+    <th onclick="sortTable(1)">Detalii</th>
+  </tr>
+  <tr>
+    <td>Pretul pentru o zi</td>
+    <td> 120$ </td>
+  </tr>
+  <tr>
+    <td>Motor</td>
+    <td>3.0 Benzină</td>
+  </tr>
+  <tr>
+    <td>Putere</td>
+    <td>347 CP</td>
+  </tr>
+  <tr>
+    <td>Transmisie</td>
+    <td>Automată CVT</td>
+  </tr>
+  <tr>
+    <td>Combustibil</td>
+    <td>Benzină</td>
+  </tr>
+  <tr>
+    <td>Consum mediu</td>
+    <td>9.8 l/100km</td>
+  </tr>
+
+</table>
+
+<script>
+function sortTable(column) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("caracteristici");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[column];
+      y = rows[i + 1].getElementsByTagName("td")[column];
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+
+<!--Rent Now-->
+
+<button id="backButton" class="back-button">
+    <ion-icon name="arrow-back-outline"></ion-icon> Back to Cars
+  </button>
+
+  <script>
+    const backButton = document.getElementById("backButton");
+  
+    backButton.addEventListener("click", function() {
+      window.location.href = "cars.html"; 
+    });
+  </script>
+  
+  
+
+<button id="openPopup" class="rent-button">
+    <ion-icon name="car-outline" class="icon"></ion-icon>
+    <span class="button-text">Rent Now</span>
+</button>
+
+
+  
+    <div id="formPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeFormPopup">&times;</span>
+            <h2>Formular de Închiriere</h2>
+            <form id="rentalForm">
+                <label for="nume">Nume:</label>
+                <input type="text" id="nume" name="nume" required><br>
+
+                <label for="data">Data închirierii:</label>
+                <input type="date" id "data" name="data" required><br>
+
+                <label for="durata">Durata (zile):</label>
+                <input type="number" id="durata" name="durata" required><br>
+
+                <label for="telefon">Număr de Telefon:</label>
+                <input type="tel" id="telefon" name="telefon" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="mesaj">Mesaj:</label>
+                <textarea id="mesaj" name="mesaj" rows="4" required></textarea><br>
+
+                <input type="submit" value="Trimite">
+            </form>
+        </div>
+    </div>
+    <div id="resultPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeResultPopup">&times;</span>
+            <h2>Rezultat Închiriere</h2>
+            <p id="resultMessage"></p>
+            <button id="okButton">OK</button>
+        </div>
+    </div>
+
+    <script>
+        const openFormPopupButton = document.getElementById("openPopup");
+        const closeFormPopupButton = document.getElementById("closeFormPopup");
+        const formPopup = document.getElementById("formPopup");
+        const closeResultPopupButton = document.getElementById("closeResultPopup");
+        const resultPopup = document.getElementById("resultPopup");
+        const resultMessage = document.getElementById("resultMessage");
+        const okButton = document.getElementById("okButton");
+
+        openFormPopupButton.addEventListener("click", function() {
+            formPopup.style.display = "block";
+        });
+
+        closeFormPopupButton.addEventListener("click", function() {
+            formPopup.style.display = "none";
+        });
+
+        closeResultPopupButton.addEventListener("click", function() {
+            resultPopup.style.display = "none";
+        });
+
+        okButton.addEventListener("click", function() {
+            resultPopup.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target == formPopup) {
+                formPopup.style.display = "none";
+            }
+        });
+
+        const rentalForm = document.getElementById("rentalForm");
+
+        rentalForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            formPopup.style.display = "none";
+
+            const durata = parseFloat(document.getElementById("durata").value);
+            const pretPezi = 120; 
+            const suma = durata * pretPezi; 
+
+            resultMessage.innerHTML = "Suma pentru închiriere este: " + suma + " EUR" + "<br><br>Revenim cu un apel în cel mai scurt timp." + "<br><br> Vă mulțumim";
+
+            
+            
+            resultPopup.style.display = "block";
+        });
+    </script>
+
+      
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+         
+
+          <p class="footer-text">
+            Căutați mașini de închiriat ieftine în Chișinău ? <br> Cu o gamă variată de vehicule, Renthal oferă clienților săi o selecție pe placul lor.
+          </p>
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="Review.html" class="footer-link">Review</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Pricing plans</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contacts</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ask a question</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & conditions</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Locatiile in Moldova </p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Chisinau(botanica)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Chisinau(Buiucani)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Balti</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Queens</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Cahul</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tiraspol</a>
+          </li>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-skype"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="copyright">
+          &copy; 2023 <a href="#">Renthal </a>. Nr1 In Moldova
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

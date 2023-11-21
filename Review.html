@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- 
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./css/style.css">
+  
+    <!-- 
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/rewiew.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    
+  <body>
+
+    <header class="header" data-header>
+      <div class="container">
+  
+        <div class="overlay" data-overlay></div>
+  
+        <a href="#" class="logo">
+          <img src="./images/logonou.png" width="" alt="Rent Car">
+        </a>
+  
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+  
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+  
+            <li>
+              <a href="About.html" class="navbar-link" data-nav-link>About us</a>
+            </li>
+  
+            <li>
+              <a href="Review.html" class="navbar-link" data-nav-link>Review</a>
+            </li>
+  
+            <li>
+              <a href="index.html#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+           
+          </ul>
+        </nav>
+  
+        <div class="header-actions">
+  
+          <div class="header-contact">
+            <a href="tel:88002345678" class="contact-link">022-38-34-36 </a>
+  
+            <span class="contact-time">Monday-Friday: 9:00 am - 6:00 pm</span>
+          </div>
+  
+          <a href="cars.html" class="btn" aria-labelledby="aria-label-txt">
+            <ion-icon name="car-outline"></ion-icon>
+  
+            <span id="aria-label-txt">Explore cars</span>
+          </a>
+  
+          <button id="togglePopup"  aria-label="Profile">
+            <ion-icon name="person-outline"></ion-icon> 
+        </button>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+              <button id="closePopup">
+                <ion-icon name="close-outline"></ion-icon> 
+            </button>
+                <div id="popupContent">
+                </div>
+            </div>
+        </div>
+        <script>
+            const togglePopupButton = document.getElementById('togglePopup');
+            const closePopupButton = document.getElementById('closePopup');
+            const popup = document.getElementById('popup');
+            const popupContent = document.getElementById('popupContent');
+        
+            togglePopupButton.addEventListener('click', () => {
+                // Deschide sau închide popup-ul, în funcție de starea actuală
+                if (popup.style.display === 'block') {
+                    // Închide popup-ul
+                    popup.style.display = 'none';
+                    popupContent.innerHTML = ''; // Șterge conținutul iframe-ului
+                } else {
+                    // Deschide popup-ul
+                    popup.style.display = 'block';
+                    
+                    // Încarcă o pagină HTML într-un iframe
+                    const iframe = document.createElement('iframe');
+                    iframe.src = '/pass.html'; // Înlocuiește 'pagina.html' cu URL-ul paginii pe care dorești să o încarci.
+                    iframe.style.width = '100%';
+                    iframe.style.height = '500px'; // Ajustează dimensiunile iframe-ului după preferințele tale.
+                    popupContent.appendChild(iframe);
+                }
+            });
+        
+            closePopupButton.addEventListener('click', () => {
+                // Închide popup-ul
+                popup.style.display = 'none';
+                popupContent.innerHTML = ''; // Șterge conținutul iframe-ului
+            });
+        </script>
+  
+  
+          <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+  
+        </div>
+  
+      </div>
+    </header>
+  
+
+    <div class="testimonials">
+      <div class="inner">
+        <h1>Review</h1>
+        <div class="border"></div>
+
+        <div class="row">
+          <div class="col">
+            <div class="testimonial">
+              <img src="./images/p1.png" alt="" >
+              <div class="name">Andronache Ion</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+
+              <p>
+                Recomand cu încredere, sunt foarte prietenoși și respectuoși. 
+                Mașinile sunt curate și îngrijite la timp, precum și prețul este accesibil
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="testimonial">
+              <img src="./images/p2.png" alt="">
+              <div class="name">Mihaela21</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p>
+                Mersi mult la companie ca mau ajutat sa gasesc o masina buna pentru weekend .Unica ce nu mi-a placut asta a fost faptul masina costa prea mult pentru complectatia care o avea.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="testimonial">
+              <img src="./images/p3.png" alt="">
+              <div class="name">ANA2001</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p>
+                Recoman sa apelati la ei cand vine vorbea de arenda unui automobil,preturile sunt cam mari in comparatie cu alte companii dar masinile merita toti banii la cat de ingrijite
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+         
+
+          <p class="footer-text">
+            Căutați mașini de închiriat ieftine în Chișinău ? <br> Cu o gamă variată de vehicule, Renthal oferă clienților săi o selecție pe placul lor.
+          </p>
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="Review.html" class="footer-link">Review</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Pricing plans</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contacts</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ask a question</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & conditions</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Locatiile in Moldova </p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Chisinau(botanica)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Chisinau(Buiucani)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Balti</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Queens</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Cahul</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tiraspol</a>
+          </li>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-skype"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="copyright">
+          &copy; 2023 <a href="#">Renthal </a>. Nr1 In Moldova
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+      <!-- 
+    - custom js link
+  -->
+  <script src="./js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

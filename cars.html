@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENTHAL - Your favourite car</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+
+    <style>
+        h2{
+            margin-top: 50px;
+        margin-left: 370px;
+    font-size: 60px;
+        }
+    </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="./images/logonou.png" width="" alt="Rent Car">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="About.html" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          <li>
+            <a href="Review.html" class="navbar-link" data-nav-link>Review</a>
+          </li>
+
+          <li>
+            <a href="index.html#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+         
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">022-38-34-36 </a>
+
+          <span class="contact-time">Monday-Friday: 9:00 am - 6:00 pm</span>
+        </div>
+
+        <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+
+          <span id="aria-label-txt">Explore cars</span>
+        </a>
+
+        <button id="togglePopup"  aria-label="Profile">
+          <ion-icon name="person-outline"></ion-icon> 
+      </button>
+      <div class="popup" id="popup">
+          <div class="popup-content">
+            <button id="closePopup">
+              <ion-icon name="close-outline"></ion-icon> 
+          </button>
+              <div id="popupContent">
+                  <!-- Aici poți încărca conținutul paginii sau HTML într-un iframe sau poți folosi JavaScript pentru a modifica conținutul dinamic -->
+              </div>
+          </div>
+      </div>
+      <script>
+          const togglePopupButton = document.getElementById('togglePopup');
+          const closePopupButton = document.getElementById('closePopup');
+          const popup = document.getElementById('popup');
+          const popupContent = document.getElementById('popupContent');
+      
+          togglePopupButton.addEventListener('click', () => {
+              // Deschide sau închide popup-ul, în funcție de starea actuală
+              if (popup.style.display === 'block') {
+                  // Închide popup-ul
+                  popup.style.display = 'none';
+                  popupContent.innerHTML = ''; // Șterge conținutul iframe-ului
+              } else {
+                  // Deschide popup-ul
+                  popup.style.display = 'block';
+                  
+                  // Încarcă o pagină HTML într-un iframe
+                  const iframe = document.createElement('iframe');
+                  iframe.src = '/pass.html'; // Înlocuiește 'pagina.html' cu URL-ul paginii pe care dorești să o încarci.
+                  iframe.style.width = '100%';
+                  iframe.style.height = '500px'; // Ajustează dimensiunile iframe-ului după preferințele tale.
+                  popupContent.appendChild(iframe);
+              }
+          });
+      
+          closePopupButton.addEventListener('click', () => {
+              // Închide popup-ul
+              popup.style.display = 'none';
+              popupContent.innerHTML = ''; // Șterge conținutul iframe-ului
+          });
+      </script>
+
+
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+      <!-- 
+        - #FEATURED CAR
+      -->
+
+      <section class="section featured-car" id="featured-car">
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="title"><b>Featured cars</b ></h2>
+
+          
+          </div>
+
+          <ul class="featured-car-list">
+
+            <li>
+              <div class="featured-car-card">
+
+                <figure class="card-banner">
+                  <img src="./images/car-1.jpg" alt="Toyota RAV4 2021" loading="lazy" width="340" height="300"
+                    class="w-101">
+                    <img src="/Renthal/images/car1-1.jpg" alt="Toyota RAV4 2021" loading="lazy" width="340" height="300"
+                    class="w-101">
+                    <img src="/Renthal/images/car1-2.jpg" alt="Toyota RAV4 2021" loading="lazy" width="340" height="300"
+                    class="w-101">
+
+                </figure>
+
+           
+
+
+                <div class="card-content">
+
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="toyota.html">Toyota RAV4</a>
+                    </h3>
+
+                    <data class="year" value="2021">2021</data>
+                  </div>
+
+                  <ul class="card-list">
+
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Hybrid</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">100km / 5.7-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>$100</strong> / zi
+                    </p>
+
+                    <button class="heart-btn" id="heart-button" aria-label="Add to favorite list">
+                      <span class="heart-icon"><i class="fas fa-heart"></i></span> <!-- Inimă umplută -->
+                  </button>
+              
+                    <button class="btn" id="toyota">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <script>
+              // Adaugă un eveniment de click butonului pentru a redirecționa utilizatorul
+              document.getElementById("toyota").addEventListener("click", function() {
+                  window.location.href = "toyota.html";
+              });
+          </script>
+
+            <li>
+              <div class="featured-car-card">
+
+                <figure class="card-banner">
+                  <img src="./images/car-2.jpg" alt="BMW 3 Series 2019" loading="lazy" width="340" height="300"
+                    class="w-102">
+                    <img src="/Renthal/images/car2-1.jpg" alt="Toyota RAV4 2021" loading="lazy" width="340" height="300"
+                    class="w-102">
+                    <img src="/Renthal/images/car2-.jpg" alt="Toyota RAV4 2021" loading="lazy" width="340" height="300"
+                    class="w-102">
+                    <img src="/Renthal/images/car2-4.jpg" alt="Toyota RAV4 2021" loading="lazy" width="340" height="300"
+                    class="w-102">
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="bmw.html">BMW 3 Series</a>
+                    </h3>
+
+                    <data class="year" value="2019">2019</data>
+                  </div>
+
+                  <ul class="card-list">
+
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Benzină</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">100km / 10-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>$120</strong> / zi
+                    </p>
+
+                    <button class="heart-btn" id="heart-button" aria-label="Add to favorite list">
+                      <span class="heart-icon"><i class="fas fa-heart"></i></span> <!-- Inimă umplută -->
+                  </button>
+
+                    <button class="btn" id="bmw">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <script>
+              // Adaugă un eveniment de click butonului pentru a redirecționa utilizatorul
+              document.getElementById("bmw").addEventListener("click", function() {
+                  window.location.href = "bmw.html";
+              });
+          </script>
+
+            <li>
+              <div class="featured-car-card">
+
+                <figure class="card-banner">
+                  <img src="./images/car-3.jpg" alt="Volkswagen T-Cross 2020" loading="lazy" width="340"
+                    height="300" class="w-103">
+                    <img src="/Renthal/images/3-1.jpg" alt="Volkswagen T-Cross 2020" loading="lazy" width="340"
+                    height="300" class="w-103">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Volkswagen T-Cross</a>
+                    </h3>
+
+                    <data class="year" value="2020">2020</data>
+                  </div>
+
+                  <ul class="card-list">
+
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Benzină</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">100km / 7,5-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>$80</strong> / zi
+                    </p>
+
+                    <button class="heart-btn" id="heart-button" aria-label="Add to favorite list">
+                      <span class="heart-icon"><i class="fas fa-heart"></i></span> <!-- Inimă umplută -->
+                  </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+
+                <figure class="card-banner">
+                  <img src="./images/car7.jpg" alt="Cadillac Escalade 2020" loading="lazy" width="440"
+                    height="300" class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Toyota Prius</a>
+                    </h3>
+
+                    <data class="year" value="2020">2015</data>
+                  </div>
+
+                  <ul class="card-list">
+
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Benzină</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">100km / 5-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>$70</strong> / zi
+                    </p>
+
+                    <button class="heart-btn" id="heart-button" aria-label="Add to favorite list">
+                      <span class="heart-icon"><i class="fas fa-heart"></i></span> <!-- Inimă umplută -->
+                  </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+
+                <figure class="card-banner">
+                  <img src="./images/car-5.jpg" alt="BMW 4 Series GTI 2021" loading="lazy" width="440"
+                    height="300" class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">BMW 4 Series GTI</a>
+                    </h3>
+
+                    <data class="year" value="2021">2021</data>
+                  </div>
+
+                  <ul class="card-list">
+
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Benzină</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">100km / 12-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>$130</strong> / zi
+                    </p>
+
+                    <button class="heart-btn" id="heart-button" aria-label="Add to favorite list">
+                      <span class="heart-icon"><i class="fas fa-heart"></i></span> <!-- Inimă umplută -->
+                  </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+
+                <figure class="card-banner">
+                  <img src="./images/car-6.jpg" alt="BMW 4 Series 2019" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">BMW 4 Series</a>
+                    </h3>
+
+                    <data class="year" value="2019">2019</data>
+                  </div>
+
+                  <ul class="card-list">
+
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Benzină</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">100km / 11-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>$100</strong> / zi
+                    </p>
+
+                    <button class="heart-btn" id="heart-button" aria-label="Add to favorite list">
+                      <span class="heart-icon"><i class="fas fa-heart"></i></span> <!-- Inimă umplută -->
+                  </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <script>
+        // Selectează toate elementele cu clasa 'heart-icon'
+        const heartIcons = document.querySelectorAll('.heart-icon');
+
+        heartIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                icon.classList.toggle('heart-filled');
+            });
+        });
+    </script>
+      
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      
+      <script>
+        let slideIndex1 = 0;
+        let slideIndex2 = 0;
+        let slideIndex3 = 0;
+      
+        // Inițializează primul slideshow
+        showSlides("w-101", slideIndex1);
+      
+        // Inițializează al doilea slideshow
+        showSlides("w-102", slideIndex2);
+      
+        // Inițializează al treilea slideshow
+        showSlides("w-103", slideIndex3);
+      
+        function showSlides(sliderName, slideIndex) {
+          let i;
+          let slides = document.getElementsByClassName(sliderName);
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(function() {
+            showSlides(sliderName, slideIndex);
+          }, 2000); // Schimbă imaginea la fiecare 2 secunde
+        }
+      </script>
+      
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+         
+
+          <p class="footer-text">
+            Căutați mașini de închiriat ieftine în Chișinău ? <br> Cu o gamă variată de vehicule, Renthal oferă clienților săi o selecție pe placul lor.
+          </p>
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="Review.html" class="footer-link">Review</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Pricing plans</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contacts</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ask a question</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & conditions</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Locatiile in Moldova </p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Chisinau(botanica)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Chisinau(Buiucani)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Balti</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Queens</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Cahul</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tiraspol</a>
+          </li>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-skype"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="copyright">
+          &copy; 2023 <a href="#">Renthal </a>. Nr1 In Moldova
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
